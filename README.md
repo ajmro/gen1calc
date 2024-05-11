@@ -6,5 +6,6 @@ A simple stat calculator for Generation I Pokémon games. Single html file for e
 
 # To do
 
-- Custom value for IV and Stat Experience
 - Aesthetic changes
+- Non integer validations (mobile)
+- Formulas and base stats sources

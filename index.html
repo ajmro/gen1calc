@@ -185,27 +185,17 @@
 
         var poke = document.getElementById('pokemon').value;
         var lvl = parseInt(document.getElementById('lvl').value);
-        var riv = document.getElementsByName('iv');
-        var rexp = document.getElementsByName('exp');
+        var iv = parseInt(document.getElementById('iv').value);
+        var exp = parseInt(document.getElementById('exp').value);
 
-        for (var i = 0, length = riv.length; i < length; i++) {
-            if (riv[i].checked) {
-                var iv = parseInt(riv[i].value);
-                break;
-            }
-        };
+        if (lvl > 100) {
+            var lvl = 100
+            document.getElementById('lvl').value=100;
+        }
 
-        for (var j = 0, length = rexp.length; j < length; j++) {
-            if (rexp[j].checked) {
-                var exp = parseInt(rexp[j].value);
-                break;
-            }
-        };
-
-        if (lvl > 100 || lvl <= 0) {
-            alert("Invalid Level");
-            document.getElementById('lvl').focus();
-            return;
+        if (exp > 65535) {
+            var exp = 65535
+            document.getElementById('exp').value=65535;
         }
 
         ev = Math.floor(Math.sqrt(exp) / 4)
@@ -386,14 +376,29 @@
 
     <fieldset>
         <legend><strong>IVs</strong></legend>
-        <input type="radio" name="iv" value="15" checked>15
-        <input type="radio" name="iv" value="0">0
+        <select id="iv">
+            <option value="0" selected="selected">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+        </select>
     </fieldset>
 
     <fieldset>
-        <legend><strong>Stat Experience</strong></legend>
-        <input type="radio" name="exp" value="0" checked>None
-        <input type="radio" name="exp" value="65535">Full
+        <legend><strong>Stat Experience (0 ~ 65535)</strong></legend>
+        <input type="text" value="0" id="exp" size="5" maxlength="5" onkeypress='return event.charCode >= 48 && event.charCode <= 57 || event.keyCode == 8' autofocus></input>
     </fieldset>
 
     <p>
