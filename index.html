@@ -2,6 +2,21 @@
 <html>
 <head>
     <title>Pokemon Stats Calculator (Gen I)</title>
+    <style>
+        body {
+        	background-color: #202124;
+  		color: #ffffff;
+  	}
+  	
+  	fieldset {
+  		display: inline-block;
+  		text-align: center;
+  	}
+  	  	
+  	input {
+  		text-align:center;
+  	}
+  </style>
 <script>
 
     var pokebstats = [
@@ -385,13 +400,13 @@
         <input type="submit" value="Calculate" onclick="submit()" />
     </p>
 
-    <ul>
-        <li>Name = <b id='name'></b></li>
-        <li>HP = <b id='hp'></b></li>
-        <li>Attack = <b id='atk'></b></li>
-        <li>Defense = <b id='def'></b></li>
-        <li>Speed = <b id='spd'></b></li>
-        <li>Special = <b id='spc'></b></li>
+    <ul style="list-style-type: none;">
+        <li>Name = <span id='name'></span></li>
+        <li>HP = <span id='hp'></b></span>
+        <li>Attack = <span id='atk'></b></span>
+        <li>Defense = <span id='def'></b></span>
+        <li>Speed = <span id='spd'></b></span>
+        <li>Special = <span id='spc'></b></span>
     </ul>
 </body>
 
