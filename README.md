@@ -1,11 +1,10 @@
 # Gen I Stat Calculator
 
-A simple stat calculator for Generation I Pokémon games. Single html file for easy offline use.
+A simple stat calculator for Generation I Pokémon games.
 
-[Instance](https://livres.neocities.org/gen1calc/)
+[Online Instance](https://livres.neocities.org/gen1calc/)
 
-# To do
+## TODO
 
-- Aesthetic changes
-- Non integer validations (mobile)
-- Formulas and base stats sources
+- Add sources
+- Notes (vitamin stat exp, 63504 max exp needed, etc.)
