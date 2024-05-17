@@ -8,3 +8,7 @@ A simple stat calculator for Generation I Pokémon games.
 
 - Add sources
 - Notes (vitamin stat exp, 63504 max exp needed, etc.)
+
+## Contact
+
+[livres@tuta.io](mailto:livres@tuta.io)
