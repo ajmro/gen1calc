@@ -152,26 +152,26 @@ var pokebstats = [
     ['ZUBAT', '40', '45', '35', '55', '40']
 ];
 
-function statcalc(bstat, iv, ev, lvl, hp=false) {
+function statcalc(bstat, dv, ev, lvl, hp=false) {
     x = 5
     if (hp == true) {
         x = lvl + 10;
     }
-    return Math.floor((((bstat+iv)*2+ev)*lvl)/100)+ x;
+    return Math.floor((((bstat+dv)*2+ev)*lvl)/100)+ x;
 }
 
 function submitForm() {
 
     var poke = document.getElementById('pokemon').value;
     var lvl = parseInt(document.getElementById('lvl').value);
-    var iv = parseInt(document.getElementById('iv').value);
+    var dv = parseInt(document.getElementById('dv').value);
     var exp = parseInt(document.getElementById('exp').value);
     ev = Math.floor(Math.sqrt(exp) / 4)
 
     document.getElementById('name').innerHTML = pokebstats[poke][0];
-    document.getElementById('hp').innerHTML = statcalc(parseInt(pokebstats[poke][1]), iv, ev, lvl, true);
-    document.getElementById('atk').innerHTML = statcalc(parseInt(pokebstats[poke][2]), iv, ev, lvl);
-    document.getElementById('def').innerHTML = statcalc(parseInt(pokebstats[poke][3]), iv, ev, lvl);
-    document.getElementById('spd').innerHTML = statcalc(parseInt(pokebstats[poke][4]), iv, ev, lvl);
-    document.getElementById('spc').innerHTML = statcalc(parseInt(pokebstats[poke][5]), iv, ev, lvl);
+    document.getElementById('hp').innerHTML = statcalc(parseInt(pokebstats[poke][1]), dv, ev, lvl, true);
+    document.getElementById('atk').innerHTML = statcalc(parseInt(pokebstats[poke][2]), dv, ev, lvl);
+    document.getElementById('def').innerHTML = statcalc(parseInt(pokebstats[poke][3]), dv, ev, lvl);
+    document.getElementById('spd').innerHTML = statcalc(parseInt(pokebstats[poke][4]), dv, ev, lvl);
+    document.getElementById('spc').innerHTML = statcalc(parseInt(pokebstats[poke][5]), dv, ev, lvl);
 }
